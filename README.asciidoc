@@ -205,7 +205,7 @@ git clone git@github.com:ipa320/jenkins_setup.git ~/jenkins-config/jenkins_setup
 
 ===== 5.2.6 Tarball Server
 
-The tarball server stores all the chroot tarball which will be used during the build process. It can be the Jenkins master or another server. In both cases you have to create a ^chroot_tarballs^ folder in *$HOME* which contains another folder where the used chroot tarballs will be stored.
+The tarball server stores all the chroot tarball which will be used during the build process. It can be the Jenkins master or another server. In both cases you have to create a +chroot_tarballs+ folder in +$HOME+ which contains another folder where the used chroot tarballs will be stored.
 ----
 mkdir -p ~/chroot_tarballs/in_use_on__<JENKINS_MASTER_NAME>
 ----
