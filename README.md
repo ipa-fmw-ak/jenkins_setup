@@ -101,6 +101,8 @@ Go to **http://localhost:8080/computer/(master)/configure** and add `prio_build 
 
 Went to **[Plugin Manager](http://localhost:8080/pluginManager)** and check the wanted PlugIns for installation.
 
+![](https://raw.github.com/ipa-fmw-ak/jenkins_setup/master/pics/plugin_manager.jpg)
+
 * **[Parameterized Trigger PlugIn](https://wiki.jenkins-ci.org/display/JENKINS/Parameterized+Trigger+Plugin)**
 
 > Is used to transfer build parameters from one job to the next. Here it is used to commit the repository to build or test.
