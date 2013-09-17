@@ -27,17 +27,6 @@ This Guide proceed for an Ubuntu-Environment...
 
 ## 1.2 Java Runtime Environment
 
-### 1.2.1 Check your Java Version:
-
-    java -version
-
-_Output example:_
->
-    java version "1.6.0_35"
-    Java(TM) SE Runtime Environment (build 1.6.0_35-b10)
-    Java HotSpot(TM) Client VM (build 20.10-b01, mixed mode, sharing)
-
-### 1.2.2 Install Java6
 
     sudo apt-get install openjdk-6-jre
     sudo apt-get install openjdk-6-jdk openjdk-6-source openjdk-6-doc openjdk-6-jre-headless openjdk-6-jre-lib
@@ -88,27 +77,13 @@ After a successfull installation you can access the Jenkins-Server in your brows
 
 ## 3.1 Global Security
 
-First off all went to **[Configure Security](http://localhost:8080/configureSecurity/?)**
+* Check **enable security**
+* Check **Jenkins's own user database** under **Access Control/Security Realm**. And check **Allow users to sign up**.
+* Set **Authorization** to **Project-based Matrix Authorization Strategy**.
+* dd an admin-user and give him all rights.
+* Add an anonymous-group and an authenticated-group and give them rights according to the screentshot.
 
-The **Access Control** section gives the opportunity to select the **Security Realm** which defines how the user's can login.
-
-Check **Jenkins's own user database**.
-
-Now you can decide if every user can sign up or if the admin has to do this.
-
-In the **Authorization** subsection you can define the permission a specific user or a user group gets granted.
-
-Therefore choose the **Project-based Matrix Authorization Strategy**.
-
-Now add an Admin-User and give them all rights!
-
-After click save the Server will throw you to a Login screen. Just register with the user name of the admin you insert in the list.
-
-You have to give permissions to at least the Anonymous and the authenticated user group and an admin user.
-
-Every user will automatically get the permission to see the workspace of all its own jobs.
-
-For the _Pipestarter_ and _Trigger_ job it will also has Build permission.
+![...](https://github.com/ipa320/jenkins_setup/blob/master/authentication.png)
 
 ## 3.2 Manage Jenkins
 
