@@ -93,6 +93,8 @@ Under **[Manage Jenkins](http://localhost:8080/configure)** you can configure yo
 * Set Jenkins URL to your servers name.
 * You can keep the default values for all other entries.
 
+![](https://raw.github.com/ipa-fmw-ak/jenkins_setup/master/pics/jenkins_configuration.jpg)
+
 ## 3.3 Master Node Configuration
 
 Go to **http://localhost:8080/computer/(master)/configure** and add `prio_build regular_build update_tarballs` to **Labels**.
