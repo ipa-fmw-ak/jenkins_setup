@@ -1,5 +1,3 @@
-# Jenkins Guide _minimal_
-
 This repository contains the code (config, src and script files) to set up and run a _Cob-Jenkins-CI-Server_ using the _Cob-Pipeline-PlugIn_.
 
 # 1. Prerequisites
@@ -80,7 +78,7 @@ After a successfull installation you can access the Jenkins-Server in your brows
 * Check **enable security**
 * Check **Jenkins's own user database** under **Access Control/Security Realm**. And check **Allow users to sign up**.
 * Set **Authorization** to **Project-based Matrix Authorization Strategy**.
-* dd an admin-user and give him all rights.
+* Add an admin-user and give him all rights.
 * Add an anonymous-group and an authenticated-group and give them rights according to the screentshot.
 
 ## 3.2 Manage Jenkins
@@ -90,6 +88,10 @@ Under **[Manage Jenkins](http://localhost:8080/configure)** you can configure yo
 * Set the **# of executors** to 1.
 * Set Jenkins URL to your servers name.
 * You can keep the default values for all other entries.
+
+## 3.3 Master Node Configuration
+
+Go to **http://localhost:8080/computer/(master)/configure** and add `prio_build regular_build update_tarballs` to **Labels**.
 
 # 4. Jenkins-PlugIns Installation
 
