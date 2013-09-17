@@ -95,6 +95,8 @@ Under **[Manage Jenkins](http://localhost:8080/configure)** you can configure yo
 
 Go to **http://localhost:8080/computer/(master)/configure** and add `prio_build regular_build update_tarballs` to **Labels**.
 
+![](https://raw.github.com/ipa-fmw-ak/jenkins_setup/master/pics/master_node_config.jpg)
+
 # 4. Jenkins-PlugIns Installation
 
 Went to **[Plugin Manager](http://localhost:8080/pluginManager)** and check the wanted PlugIns for installation.
