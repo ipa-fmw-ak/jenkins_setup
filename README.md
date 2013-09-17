@@ -83,7 +83,7 @@ After a successfull installation you can access the Jenkins-Server in your brows
 * dd an admin-user and give him all rights.
 * Add an anonymous-group and an authenticated-group and give them rights according to the screentshot.
 
-![...](https://github.com/ipa320/jenkins_setup/blob/master/authentication.png)
+!(https://github.com/ipa-fmw-ak/jenkins_setup/blob/master/pics/configure_global_security1.jpg?raw=true)
 
 ## 3.2 Manage Jenkins
 
