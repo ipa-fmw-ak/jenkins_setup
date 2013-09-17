@@ -356,7 +356,7 @@ Go to the **Cob Pipeline Configuration** section. The following fields are all r
     
 > Nodes which can be chosen for Hardware Build/Test jobs.
     
-* **Target Platform Url**
+* **Target Platform URL**
     
 > URL where the ROS **targets.yaml** is stored, defining the Ubuntu target platforms for each **ROS** Version, e.g..
 
