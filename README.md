@@ -80,7 +80,7 @@ After a successfull installation you can access the Jenkins-Server in your brows
 * Set **Authorization** to **Project-based Matrix Authorization Strategy**.
 * Add an admin-user and give him all rights.
 * Add an anonymous-group and an authenticated-group and give them rights according to the screentshot.
-* 
+
 ![](https://raw.github.com/ipa-fmw-ak/jenkins_setup/master/pics/authentication.png)
 
 ## 3.2 Manage Jenkins
