@@ -85,9 +85,7 @@ After a successfull installation you can access the Jenkins-Server in your brows
 
 ## 3.2 Manage Jenkins
 
-Under **[Manage Jenkins](http://localhost:8080/configure)** you can configure your Jenkins-Server.
-
-![](https://raw.github.com/ipa-fmw-ak/jenkins_setup/master/pics/manage_jenkins.jpg)
+Under **[Configure System](http://localhost:8080/configure)** you can configure your Jenkins-Server.
 
 * Set the **# of executors** to 1.
 * Set Jenkins URL to your servers name.
