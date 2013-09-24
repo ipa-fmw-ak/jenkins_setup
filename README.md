@@ -370,6 +370,8 @@ and add this:
             ProxyPass / http://localhost:8080/
     </VirtualHost>
 
+
+
     cd /etc/apache2
     sudo nano apache2.conf
     
