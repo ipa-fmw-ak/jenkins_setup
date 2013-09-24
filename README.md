@@ -352,6 +352,10 @@ _When you fill out the fields, the values will be validated in the background._
 
 ## 5.6 Set Jenkins to Port 80
 
+Install Apache2
+
+    sudo apt-get install apache2 apache2-doc 
+
 went to:
 
     cd /etc/apache2/mods-enabled
