@@ -349,3 +349,30 @@ _When you fill out the fields, the values will be validated in the background._
 
 ## 5.5 Backup your Jenkins-Server
 **TODO!!!**
+
+## 5.6 Set Jenkins to Port 80
+
+    cd /etc/apache2/mods-enabled
+    sudo nano proxy.conf
+    
+and add this:
+    
+    <VirtualHost *:80>
+            ServerAdmin webmaster@localhost
+            ServerName jenkins
+            ServerAlias jenkins
+            ProxyRequests Off
+            <Proxy *>
+                    Order deny,allow
+                    Allow from all
+            </Proxy>
+            ProxyPreserveHost on
+            ProxyPass / http://localhost:8080/
+    </VirtualHost>
+
+    cd /etc/apache2
+    sudo nano apache2.conf
+    
+and add to the bottom:
+
+    ServerName localhost:8080
