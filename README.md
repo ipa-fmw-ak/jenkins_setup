@@ -352,6 +352,8 @@ _When you fill out the fields, the values will be validated in the background._
 
 ## 5.6 Set Jenkins to Port 80
 
+went to:
+
     cd /etc/apache2/mods-enabled
     sudo nano proxy.conf
     
@@ -370,7 +372,7 @@ and add this:
             ProxyPass / http://localhost:8080/
     </VirtualHost>
 
-
+than went to:
 
     cd /etc/apache2
     sudo nano apache2.conf
