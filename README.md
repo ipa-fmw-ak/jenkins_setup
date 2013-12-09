@@ -99,6 +99,33 @@ Go to **http://localhost:8080/computer/(master)/configure** and add `prio_build 
 
 ![](https://raw.github.com/ipa-fmw-ak/jenkins_setup/master/pics/master_node_config.jpg)
 
+## 3.4 Generating SSH-Key for GitHub
+
+Lists the files in your .ssh directory
+
+    cd ~/.ssh
+    ls
+    
+Creates a new ssh key, using the provided email as a label
+
+    ssh-keygen -t rsa -C "your_email@example.com"
+    ssh-add id_rsa
+    
+Copies the contents of the id_rsa.pub file to your clipboard
+
+    clip < ~/.ssh/id_rsa.pub
+    
+* Go to your Account Settings
+* Click "SSH Keys" in the left sidebar
+* Click "Add SSH key"
+* Paste your key into the "Key" field
+* Click "Add key"
+* Confirm the action by entering your GitHub password
+
+Attempts to ssh to github
+
+    ssh -T git@github.com
+
 # 4. Jenkins-PlugIns Installation
 
 Went to **[Plugin Manager](http://localhost:8080/pluginManager)** and check the wanted PlugIns for installation.
