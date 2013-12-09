@@ -193,24 +193,21 @@ Set up the GitHub user. This user has to have read-access to all repositories to
     git config --global user.email "<EMAIL>"
 
 
-### 5.2.3 SSH Configuration
-
-
-### 5.2.4 jenkins_config Repository
+### 5.2.3 jenkins_config Repository
 
 Clone the **jenkins_config** repository into the `jenkins-config` folder.
 
     git clone git@github.com:ipa320/jenkins_config.git ~/jenkins-config/jenkins_config
 
 
-### 5.2.5 jenkins_setup Repository
+### 5.2.4 jenkins_setup Repository
 
 Clone the **jenkins_setup** repository into the `jenkins-config` folder.
 
     git clone git@github.com:ipa320/jenkins_setup.git ~/jenkins-config/jenkins_setup
 
 
-### 5.2.6 PYTHONPATH
+### 5.2.5 PYTHONPATH
 
 Add the **jenkins_setup** module to the `$PYTHONPATH`.
 
@@ -220,7 +217,7 @@ Add the **jenkins_setup** module to the `$PYTHONPATH`.
 Afterwards reboot the Jenkins-Server!
 
 
-### 5.2.7 Tarball Server
+### 5.2.6 Tarball Server
 
 The **Tarball-Server** stores all the chroot tarball which will be used during the build process. It can be the Jenkins master or another server. In both cases you have to create a `chroot_tarballs` folder in `$HOME` which contains another folder where the used chroot tarballs will be stored.
 
