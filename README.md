@@ -109,6 +109,7 @@ Lists the files in your .ssh directory
 Creates a new ssh key, using the provided email as a label
 
     ssh-keygen -t rsa -C "your_email@example.com"
+    exec ssh-agent bash
     ssh-add id_rsa
     
 Copies the contents of the id_rsa.pub file to your clipboard
