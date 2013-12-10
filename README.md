@@ -333,7 +333,7 @@ For the usage of the **Cob-Pipeline** three parts are necessary:
 Download the **[.hpi](https://github.com/fmw-jk/cob-pipeline-plugin/releases)** and place it in `/var/lib/jenkins/plugins`.
 
     cd /var/lib/jenkins/plugins
-    sudo wget https://github.com/ipa-fmw-ak/cob-pipeline-plugin/blob/master/releases/v0.9.7/cob-pipeline.hpi?raw=true
+    sudo wget https://github.com/ipa-fmw-ak/cob-pipeline-plugin/blob/master/releases/v0.9.7/cob-pipeline.hpi
 
 Restart your Jenkins-Server
 
