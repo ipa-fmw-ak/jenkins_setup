@@ -120,6 +120,10 @@ or
 
     cat ~/.ssh/id_rsa.pub >/dev/clipboard
     
+otherwise use vi to copy the key
+
+    sudo vi id_rsa.pub 
+    
 * Go to your Account Settings
 * Click "SSH Keys" in the left sidebar
 * Click "Add SSH key"
