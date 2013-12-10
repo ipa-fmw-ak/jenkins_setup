@@ -414,6 +414,19 @@ To update all pipelines (e.g. after a general configuration change) an additiona
 Afterwards Reload Configuration from Disk under [localhost:8080/manage](http://localhost:8080/manage) and run the job to create the tarballs. you will have to start this job manually and give it the admin user and password (if using github OAuth, the use the token from [localhost:8080/me/configure](http://localhost:8080/me/configure) when logged in as the **Admin** user.
 
 
+### 5.4.5 Configure _default view_
+
+Login as **Admin** and create a new view by pressing the **+**.
+
+_NEW VIEW_
+
+Name it **current_user** and select _List View_. Add Job Filter in the Job Filter section and select _User Permissions_ for Jobs. Configure as shown in the picture and press OK.
+
+_BILD_
+
+Go to [localhost:8080/configure](http://localhost:8080/configure) and select **current_user** as _Default_ view.
+
+
 ## 5.6 Set Jenkins to Port 80
 
 Install Apache2
