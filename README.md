@@ -418,11 +418,11 @@ Afterwards Reload Configuration from Disk under [localhost:8080/manage](http://l
 
 Login as **Admin** and create a new view by pressing the **+**.
 
-_NEW VIEW_
+![](https://)
 
 Name it **current_user** and select _List View_. Add Job Filter in the Job Filter section and select _User Permissions_ for Jobs. Configure as shown in the picture and press OK.
 
-_BILD_
+![](https://)
 
 Go to [localhost:8080/configure](http://localhost:8080/configure) and select **current_user** as _Default_ view.
 
