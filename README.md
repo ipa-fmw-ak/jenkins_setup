@@ -385,8 +385,20 @@ Go to the **Cob Pipeline Configuration** section. The following fields are all r
 
 _When you fill out the fields, the values will be validated in the background._
 
-### 5.4.3 Configure +update_chroot_tarballs+ job
-**TODO!!!**
+### 5.4.3 Configure `update_chroot_tarballs` job
+
+To set up the necessary chroot tarballs and keep them up-to-date an additional job is needed. Copy the prepared job `config.xml` into the job folder and make the jenkins user own it.
+
+    sudo mkdir /var/lib/jenkins/jobs/update_chroot_tarballs
+    sudo cp ~/jenkins-config/jenkins_setup/templates/update_chroot_tarballs/UPDATE_CHROOT_TARBALLS_config.xml         /var/lib/jenkins/jobs/update_chroot_tarballs/config.xml
+    sudo chown -R jenkins:jenkins /var/lib/jenkins/jobs/update_chroot_tarballs
+    
+Open `/var/lib/jenkins/jobs/update_chroot_tarballs/config.xml` and adjust it to your demands:
+
+
+    set the SERVERNAME to your Jenkins server
+    set the APT_CACHER_ADDRESS to your apt-cacher
+
 
 ## 5.5 Backup your Jenkins-Server
 **TODO!!!**
