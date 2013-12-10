@@ -116,6 +116,10 @@ Copies the contents of the id_rsa.pub file to your clipboard
 
     clip < ~/.ssh/id_rsa.pub
     
+or
+
+    cat ~/.ssh/id_rsa.pub >/dev/clipboard
+    
 * Go to your Account Settings
 * Click "SSH Keys" in the left sidebar
 * Click "Add SSH key"
