@@ -335,7 +335,7 @@ Download the **[.hpi](https://github.com/fmw-jk/cob-pipeline-plugin/releases)** 
 
 Restart your Jenkins-Server
 
-    /etc/init.d/jenkins restart
+    sudo /etc/init.d/jenkins restart
 
 ### 5.4.2 Configure the Cob-Pipeline
 
@@ -385,7 +385,7 @@ Go to the **Cob Pipeline Configuration** section. The following fields are all r
 
 _When you fill out the fields, the values will be validated in the background._
 
-## 5.4 Global and Individual Project List Views
+### 5.4.3 Configure +update_chroot_tarballs+ job
 **TODO!!!**
 
 ## 5.5 Backup your Jenkins-Server
