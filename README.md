@@ -32,7 +32,10 @@ This Guide proceed for an Ubuntu-Environment...
 
 ## 1.3 Git
 
+    //for ubuntu dis. until v.10.04
     sudo apt-get install git-core
+    //for newer ubuntu dis.
+    sudo apt-get install git
 
 
 ## 1.4 Maven
@@ -55,7 +58,7 @@ _For isolated environment use:_
 
     wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
     sudo echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list
-    sudo apt-get update && sudo apt-get install -y jenkins
+    sudo apt-get update && sudo apt-get install jenkins
 
 **[Individual Package Download](http://pkg.jenkins-ci.org/debian/)**
 
@@ -113,10 +116,6 @@ Creates a new ssh key, using the provided email as a label
     ssh-add id_rsa
     
 Copies the contents of the id_rsa.pub file to your clipboard
-
-    clip < ~/.ssh/id_rsa.pub
-    
-or
 
     cat ~/.ssh/id_rsa.pub >/dev/clipboard
     
@@ -204,9 +203,9 @@ Set up the GitHub user. This user has to have read-access to all repositories to
 
 ### 5.2.3 jenkins_config Repository
 
-Clone the **jenkins_config** repository into the `jenkins-config` folder.
+Clone the **jenkins_config_example** repository into the `jenkins-config` folder.
 
-    git clone git@github.com:ipa320/jenkins_config.git ~/jenkins-config/jenkins_config
+    git clone git@github.com:ipa320/jenkins_config_example.git ~/jenkins-config/jenkins_config_exampla
 
 
 ### 5.2.4 jenkins_setup Repository
@@ -220,17 +219,19 @@ Clone the **jenkins_setup** repository into the `jenkins-config` folder.
 
 Add the **jenkins_setup** module to the `$PYTHONPATH`.
 
-    echo "export PYTHONPATH=~/jenkins-config/jenkins_setup/src" > /etc/profile.d/python_path.sh
-    echo "source /opt/ros/<ROS_RELEASE>/setup.sh" >> /etc/profile.d/python_path.sh
+    sudo su -c 'echo "export PYTHONPATH=~/jenkins-config/jenkins_setup/src" > /etc/profile.d/python_path.sh'
+    sudo su -c 'echo "source /opt/ros/groovy/setup.sh" >> /etc/profile.d/python_path.sh'
 
 Afterwards reboot the Jenkins-Server!
+
+    sudo /etc/init.d/jenkins restart
 
 
 ### 5.2.6 Tarball Server
 
 The **Tarball-Server** stores all the chroot tarball which will be used during the build process. It can be the Jenkins master or another server. In both cases you have to create a `chroot_tarballs` folder in `$HOME` which contains another folder where the used chroot tarballs will be stored.
 
-    mkdir -p ~/chroot_tarballs/in_use_on__<JENKINS_MASTER_NAME>
+    mkdir -p ~/chroot_tarballs/in_use_on__<JENKINS MASTER NAME>
 
 
 ## 5.3 Slave
@@ -246,9 +247,9 @@ and add to the file:
 
 ### 5.3.2 SSH Access
 
-    ssh-copy-id <master>    # _on slave_
-    ssh <master>            # _on slave_
-    ssh-copy-id <slave>     # _on master_
+    ssh-copy-id <master - name>    # _on slave_
+    ssh <master - name>            # _on slave_
+    ssh-copy-id <slave - name>     # _on master_
 
 
 ### 5.3.3 Pbuilder
@@ -308,9 +309,6 @@ Finally mount `tmpfs` by entering (as root):
 
     mount -a
 
-### 5.3.4 Slave setup on Master
-**TODO!!!**
-
 
 ## 5.4 The Cob-Pipeline
 
@@ -350,10 +348,14 @@ Go to the **Cob Pipeline Configuration** section. The following fields are all r
 * **Configuration Folder**
     
 > Enter the path of the Cob-Pipeline configuration folder.
+
+    /home/jenkins/jenkins-config
     
 * **Tarball Location**
     
 > Enter the location where the tarballs are stored.
+
+    jenkins@localhost:/home/jenkins/chroot_tarballs
     
 * **GitHub User Login/Password**
     
@@ -363,9 +365,13 @@ Go to the **Cob Pipeline Configuration** section. The following fields are all r
     
 > GitHub user that ownes the ^jenkins_setup^ and the ^jenkins_config^ repository.
     
+    ipa320
+    
 * **ROS Releases**
     
 > ROS versions that should be supported by your build/test pipeline.
+
+    groovy hydro
     
 * **Robots**
     
@@ -374,6 +380,8 @@ Go to the **Cob Pipeline Configuration** section. The following fields are all r
 * **Target Platform URL**
     
 > URL where the ROS **targets.yaml** is stored, defining the Ubuntu target platforms for each **ROS** Version, e.g..
+
+    https://raw.github.com/ipa320/jenkins_setup/master/releases/targets.yaml
 
 _When you fill out the fields, the values will be validated in the background._
 
