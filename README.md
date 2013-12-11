@@ -447,6 +447,11 @@ Prepare the _jenkins node_ for _graphical tests_ by installing **VirtualGL** and
     
 _The graphics driver must be an version of the official nvidia driver. Successfully tested were the versions nvidia-current, nvidia-304 and nvidia-304-experimental. Other nvidia drivers are likely to work as well but are not tested yet._
 
+    sudo add-apt-repository ppa:ubuntu-x-swat/x-updates
+    sudo apt-get update
+    sudo apt-get install nvidia-current-dev
+    sudo reboot now
+
 
 ## 5.6 Set Jenkins to Port 80
 
