@@ -203,9 +203,9 @@ Set up the GitHub user. This user has to have read-access to all repositories to
 
 ### 5.2.3 jenkins_config Repository
 
-Clone the **jenkins_config_example** repository into the `jenkins-config` folder.
+Clone the **jenkins_config** repository into the `jenkins-config` folder.
 
-    git clone git@github.com:ipa320/jenkins_config_example.git ~/jenkins-config/jenkins_config_exampla
+    git clone git@github.com:ipa320/jenkins_config.git ~/jenkins-config/jenkins_config
 
 
 ### 5.2.4 jenkins_setup Repository
