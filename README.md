@@ -389,7 +389,7 @@ Go to the **Cob Pipeline Configuration** section. The following fields are all r
 
 _When you fill out the fields, the values will be validated in the background._
 
-### 5.4.3 Configure `update_chroot_tarballs` job
+### 5.4.3 Configure **update_chroot_tarballs** job
 
 To set up the necessary chroot tarballs and keep them up-to-date an additional job is needed. Copy the prepared job `config.xml` into the job folder and make the jenkins user own it.
 
@@ -406,7 +406,7 @@ Open `/var/lib/jenkins/jobs/update_chroot_tarballs/config.xml` and adjust it to 
 Afterwards Reload Configuration from Disk under **[localhost:8080/manage]**(http://localhost:8080/manage) and run the job to create the tarballs.
 
 
-### 5.4.4 Configure `update_pipelines` job
+### 5.4.4 Configure **update_pipelines** job
 
 To update all pipelines (e.g. after a general configuration change) an additional job is needed. Copy the prepared job 
 `config.xml` into the job folder and make the jenkins user own it.
@@ -429,6 +429,23 @@ Name it **current_user** and select _List View_. Add Job Filter in the Job Filte
 ![](https://)
 
 Go to [localhost:8080/configure](http://localhost:8080/configure) and select **current_user** as _Default_ view.
+
+### 5.4.6 Configure **mailer**
+
+Copy the _jelly template_ for the E-Mail generation
+
+    sudo mkdir /var/lib/jenkins/email-templates
+    sudo cp ~/jenkins-config/jenkins_setup/templates/email-templates/html-with-health-builds-tests.jelly /var/lib/jenkins/email-templates/
+    sudo chown -R jenkins:jenkins /var/lib/jenkins/email-templates
+
+### 5.4.7 Configure the JenkinsServer for _graphics tests_
+
+Prepare the _jenkins node_ for _graphical tests_ by installing **VirtualGL** and **TurboVNC**.
+
+    sudo ~/jenkins-config/jenkins_setup/scripts/graphicTest/prepareNode.bash
+    sudo reboot now
+    
+_The graphics driver must be an version of the official nvidia driver. Successfully tested were the versions nvidia-current, nvidia-304 and nvidia-304-experimental. Other nvidia drivers are likely to work as well but are not tested yet._
 
 
 ## 5.6 Set Jenkins to Port 80
