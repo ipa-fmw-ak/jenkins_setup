@@ -74,7 +74,7 @@ You can find the **war** file **[here](http://mirrors.jenkins-ci.org/war/)**
     cd /usr/share/jenkins/
     sudo rm -rf jenkins.war
     sudo wget http://mirrors.jenkins-ci.org/war/1.514/jenkins.war
-    /etc/init.d/jenkins restart
+    sudo /etc/init.d/jenkins restart
 
 After a successfull installation you can access the Jenkins-Server in your browser: **[localhost:8080](http://localhost:8080)**
 
