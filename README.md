@@ -41,6 +41,10 @@ This Guide proceed for an Ubuntu-Environment...
 ## 1.4 Maven
 
     sudo apt-get install maven
+    
+## 1.5 Basic Packages
+    
+    sudo apt-get install python-jenkins python-mock python-nose python-paramiko openssh-server
 
 
 # 2. Jenkins Installation
